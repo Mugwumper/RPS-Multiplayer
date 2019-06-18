@@ -2,101 +2,67 @@
 <html lang="en-us">
 
 <head>
-
     <meta charset="UTF-8">
     <title>RPS Online Edition</title>
-
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <!-- Firebase References -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-
 </head>
 
 <body>
 
-    <div class="container">
-
-        <!-- Jumbotron Title -->
-        <div classf="jumbotron">
+    <div class="wrapper">
+        <header class="header">
             <h1 class="text-center">Welcome to Rock Paper Scissors</h1>
-            <h3 class="text-center">"online multiplayer edition"</h3>
-        </div>
-
-        <!-- Current Product -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-4 col-sm-offset-2">
-                                <img class="img-responsive thumbnail center-block"
-                                    src="http://graphitepublications.com/wp-content/uploads/2015/04/5-Coding-Challenges-to-Help-You-Train-Your-Brain.jpg"
-                                    alt="Coding Brain">
-                            </div>
-                            <div class="col-sm-6">
-                                <h3 class="">
-                                    <strong>Highest Bidder:</strong>
-                                    <span id="highest-bidder"></span>
-                                </h3>
-                                <h3 class="">
-                                    <strong>Current Price:</strong>
-                                    <span id="highest-price"></span>
-                                </h3>
-                            </div>
+            <h4 class="text-center">"online multiplayer edition"</43>
+            </header>
+        <article class="main">
+            <p>score, prompts and general game display</p>
+            <h3 id="wins">--wins--</h3>
+            <h3 id="losses">--losses--</h3>
+            <h3 id="ties">--ties--</h3>
+        </article>
+        <aside class="aside aside-1">
+        </aside>
+        <aside class="aside aside-2">
+        </aside>
+        <footer class="footer">
+                <div id="reset">
+                        <button onclick="reset()">reset</button>
+                    </div>
+                    <div id="reset">
+                            <button onclick="weare1()">force this to be Player1</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                <h6 class="">connected users:
+                <strong>
+                    <span id="connected-viewers"></span>
+                </strong>
+            </h6>
+            <h6 class="">player1:
+                    <strong>
+                        <span id="player1weapon"></span>
+                    </strong>
+                </h6>
+                <h6 class="">player2:
+                        <strong>
+                            <span id="player2weapon"></span>
+                        </strong>
+                    </h6>
 
-        <!-- Make Your Bid -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input type="radio" name="toggle" class="radio" onclick="selectedWeapon('Rock')" value="Rock">🍪 Rock
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="toggle" class="radio" value="Paper">📰 Paper
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="toggle" class="radio" value="Scissors">✂ Scissors
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <button onclick="selectedWeapon('Rock')">🍪 Rock</button>
-                        <button onclick="selectedWeapon('Paper')">📰 Paper</button>
-                        <button onclick="selectedWeapon('Scissors')">✂ Scissors</button>
-                    </div>
-                    <h3 class="">connected users:
-                            <strong>
-                              <span id="connected-viewers"></span>
-                            </strong></h3>
-                            </div>
-            </div>
-        </div>
-
-
+                        <h6 id="weare">--weare--</h6>
+                        <h6 id="sbm">--sbm--</h6>
+        </footer>
     </div>
 
     <hr>
-    <p id="price"></p>
-
+    <hr>
+    <hr>
     <!-- JavaScript -->
     <script src="assets/javascript/script.js"></script>
 
