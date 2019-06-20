@@ -1,12 +1,45 @@
 
 :root {
-    --background: #daeede;
+    --background: #232323;
  }
 
- body {
-    padding: 2em; 
+ #gearIcon {
+   align-self: left;
+   font-size: 40px;
+   opacity: 0.2;
+   transition: 0.3s;
+   cursor: help;
+   position: absolute;
+   margin: 10px;
+   width: 30px;
+   left: 3px; 
   }
-  
+ 
+ #gearIcon:hover {
+   opacity: 1
+  }
+
+#settings {
+  position:absolute;
+  z-index:1;
+  left:30px;
+  top:55px;
+  width: 80%;
+  height: 400px;  
+  padding: 50px;
+  color: white;
+  background-color: rgb(56, 45, 45);
+  border: 1px solid red;
+  opacity: 0.95;
+  box-sizing: content-box;
+}
+
+
+ /* the following line does nothing */
+ body {
+   color: #49FF18;
+   background-color: coral;
+  }
 
 #reset {
     margin-top: 12px;
@@ -15,7 +48,45 @@
 #localPlayer {
 }
 
+#sbm{
+  font-size: 16px;
+
+}
+
+#submitBtn {
+  margin-bottom: 12px;
+}
+
+#playerName {
+   color: #49FF18;
+   background-color: #353030;
+}
+
+#nameUs, #nameThem {
+margin: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 24px;
+color: #545892;
+color: #FFF;
+background-color: #232323;
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+
+.lowBtn {
+  color: rgb(204, 232, 255); font-size: 14px; line-height: 14px; padding: 5px; border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 139, 208) 32%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+  .myButton:hover {
+  background: #1C6EA4; }
+  .myButton:active {
+  background: #144E75; }
+
+#psThemImage {
+  text-shadow: 2px 2px 2px #0A2639;
+  font-size: 70px;
+}
+
 .wrapper {
+  color: #49FF18;
+  margin: 5px;
     display: flex;  
     flex-flow: row wrap;
     text-align: center;
@@ -24,6 +95,7 @@
   .wrapper > * {
     padding: 6px;
     flex: 1 100%;
+    
   }
   
   .header {
@@ -36,14 +108,19 @@
   }
   
   .main {
-    text-align: left;
+    /* text-align: left; */
     background: var(--background);
+    border: 3px solid rgba(70, 211, 129, 0.842);
   }
   
   .aside {
-      min-width: 300px;
-      border: 2px solid #1C6EA4;
-    }
+    min-width: 300px;
+    min-height: 250px;
+    border: 2px solid #1C6EA4;
+
+  }
+
+
   .aside-1 {
     background: var(--background);
   }
