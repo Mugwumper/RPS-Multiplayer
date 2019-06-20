@@ -119,6 +119,7 @@ function isGamePlayedByUs(game) {
   if (p.hasOwnProperty('name')) {
     nameUs = p.name;
     $("#nameUs").text(p.name);
+    $("#playerName").val(p.name);    
   }
   $("#psUs").text('select your weapon');
   return false;
@@ -262,6 +263,7 @@ function postName() {
   sbm("new name '"+name+"'");
   nameUs = name;
   $("#nameUs").text(name);
+  $("#playerName").val(name);    
 }
 
 function weare1() {
@@ -336,4 +338,8 @@ function clearSBM() {
 function showSettings() {
   sbm("Showing Settings");
   $("#settings").show();
+}
+
+function closeSettings() {
+  $("#settings").hide();
 }

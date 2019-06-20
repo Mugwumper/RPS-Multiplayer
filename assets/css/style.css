@@ -22,14 +22,15 @@
 #settings {
   position:absolute;
   z-index:1;
-  left:30px;
+  left: 5%;
   top:55px;
   width: 80%;
-  height: 400px;  
+  height: 80%;  
+  max-height: 400px;
   padding: 50px;
   color: white;
-  background-color: rgb(56, 45, 45);
-  border: 1px solid red;
+  background-color: rgb(46, 45, 56);
+  border: 1px solid rgb(17, 0, 255);
   opacity: 0.95;
   box-sizing: content-box;
 }
