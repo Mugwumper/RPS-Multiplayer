@@ -21,12 +21,14 @@
   <div class="wrapper">
 
       <div id="settings">
+          <!-- Uncomment the section below for debug controls. -->
+          <!-- <h2>Debug Controls</h2>
           <div id="reset">
-            <button class="lowBtn" onclick="reset()">next round</button>
+            <button class="lowBtn" onclick="reset()">Next Round</button>
+            <p>'Next Round' occures at the end of each round automatically, this provides a way to force a reset.</p>
           </div>
-          <div id="reset">
-            <button class="lowBtn" onclick="weare1()">force this to be Player1</button>
-          </div>
+          <button class="lowBtn" onclick="weare1()">Force this to be Player1</button>
+          <p>This program only looks at the number of connections. This sets the program to treat this instance as the first to launch.</p>
           <h6 class="">connected users:
             <strong>
               <span id="connected-viewers"></span>
@@ -42,21 +44,20 @@
             <strong>
               <span id="player2weapon"></span>
             </strong>
-          </h6>
+          </h6> 
           <h6 id="player2name">--p2name--</h6>
           <h6 id="weare">--weare--</h6>
+          <h2>Setting Controls</h2>
+          -->
           <form>
-            Name:<br>
+            Name:
             <input type="text" id="playerName" name="name" value="">
-            <br><br>
           </form>
-          <button class="lowBtn" id="submitBtn" onclick="postName()">Submit</button>
           <button class="lowBtn" id="closeSetttingsBtn" onclick="closeSettings()">Close</button>
         </div>
   
 
     <header class="header">
-      <!-- <div id="gearIcon"  data-toggle="tooltip" title="Shows settings and debug info" onclick="showSettings()">⚙</div> -->
       <div id="gearIcon" onclick="showSettings()">⚙</div>
       <h1 class="text-center">Welcome to Rock-Paper-Scissors</h1>
       <h4 class="text-center">"online multiplayer edition"</43>
@@ -68,45 +69,12 @@
           <h4 id="ties">--ties--</h3>
             <h6 id="sbm">--sbm--</h6>
     </article>
+    <!-- The two asides are filled in from javascript, see: updateForPlayerX() -->
     <aside class="aside aside-1">
     </aside>
     <aside class="aside aside-2">
     </aside>
     <footer class="footer">
-
-      <div id="settingsXX">
-        <div id="reset">
-          <button class="lowBtn" onclick="reset()">next round</button>
-        </div>
-        <div id="reset">
-          <button class="lowBtn" onclick="weare1()">force this to be Player1</button>
-        </div>
-        <h6 class="">connected users:
-          <strong>
-            <span id="connected-viewers"></span>
-          </strong>
-        </h6>
-        <h6 class="">player1 weapon:
-          <strong>
-            <span id="player1weapon"></span>
-          </strong>
-        </h6>
-        <h6 id="player1name">--p1name--</h6>
-        <h6 class="">player2 weapon:
-          <strong>
-            <span id="player2weapon"></span>
-          </strong>
-        </h6>
-        <h6 id="player2name">--p2name--</h6>
-        <h6 id="weare">--weare--</h6>
-        <form>
-          Name:<br>
-          <input type="text" id="playerName" name="name" value="">
-          <br><br>
-        </form>
-        <button class="lowBtn" id="submitBtn" onclick="postName()">Submit</button>
-      </div>
-
     </footer>
   </div>
 

@@ -264,6 +264,17 @@ function postName() {
   nameUs = name;
   $("#nameUs").text(name);
   $("#playerName").val(name);    
+  if (arewe2()) {
+    dbpRPS2.set({
+      weapon: gWeaponUs,
+      name: nameUs
+    });
+  } else {
+    dbpRPS1.set({
+      weapon: gWeaponUs,
+      name: nameUs
+    });
+  }
 }
 
 function weare1() {
@@ -280,6 +291,7 @@ function arewe2() {
 }
 
 function selectedWeapon(wType) {
+  gWeaponUs = wType;
   console.log(wType);
   if (nameUs === '') {
     nameUs = gID;
@@ -342,4 +354,5 @@ function showSettings() {
 
 function closeSettings() {
   $("#settings").hide();
+  postName();
 }

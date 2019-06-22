@@ -26,9 +26,9 @@
   top:55px;
   width: 80%;
   height: 80%;  
-  max-height: 400px;
-  padding: 50px;
-  color: white;
+  /* max-height: 400px; */
+  padding: 40px;
+  color: rgb(196, 203, 241);
   background-color: rgb(46, 45, 56);
   border: 1px solid rgb(17, 0, 255);
   opacity: 0.95;
@@ -44,6 +44,10 @@
 
 #reset {
     margin-top: 12px;
+}
+
+.lowBtn {
+  margin: 14px;
 }
 
 #localPlayer {
@@ -65,7 +69,7 @@
 
 #nameUs, #nameThem {
 margin: 20px;
-font-family: Arial, Helvetica, sans-serif;
+font-family: "Comic Sans MS", cursive, sans-serif;
 font-size: 24px;
 color: #545892;
 color: #FFF;
@@ -111,13 +115,13 @@ text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 3
   .main {
     /* text-align: left; */
     background: var(--background);
-    border: 3px solid rgba(70, 211, 129, 0.842);
+    border: 3px solid rgba(64, 180, 112, 0.842);
   }
   
   .aside {
     min-width: 300px;
     min-height: 250px;
-    border: 2px solid #1C6EA4;
+    border: 2px solid rgb(28, 164, 157);
 
   }
 
